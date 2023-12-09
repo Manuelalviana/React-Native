@@ -47,7 +47,7 @@ const Calculator = () => {
         if (n2 !== 0) {
           response = n1 % n2;
         } else {
-          response = "Impossível calcular o módulo de uma divisão por 0"
+          response = "Poem um numero ai, não pode 0"
         };
         break;
       case "expo":
@@ -73,7 +73,7 @@ const Calculator = () => {
         const formattedResult = response.toFixed(2).toString().replace(".", ",");
         setResult(formattedResult);
       } else {
-        response = "Informe apenas valores válidos! Não textos"
+        response = "Informe apenas valores numericos"
         setResult(response);
       }
     } else {
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: "#000",
+     backgroundColor: "#084d6e",
   },
   header: {
     fontSize: 28,
