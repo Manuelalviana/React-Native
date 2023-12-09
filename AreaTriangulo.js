@@ -60,7 +60,7 @@ export default function App() {
 
         <TouchableHighlight
           style={styles.buttonContainer}
-          underlayColor="yellow" // Cor de destaque ao tocar
+          underlayColor="black" // Cor de destaque ao tocar
           onPress={calcularArea}
         >
           <Text style={[styles.buttonText, styles.bold]}>Calcular Área</Text>
@@ -88,7 +88,7 @@ const screenWidth = Dimensions.get('window').width
         },
         content: {
             flex: 1,
-            backgroundColor: '#121212',
+            backgroundColor: '#993399',
             padding: 20,
             color: 'white',
             maxWidth: 425,
@@ -152,8 +152,8 @@ const screenWidth = Dimensions.get('window').width
             fontSize: 24,
         },
         buttonContainer: {
-            backgroundColor: 'green',
-            borderRadius: 0, // Sem bordas arredondadas
+            backgroundColor: '#008b8b',
+            borderRadius: 15, // bordas redondas
             overflow: 'hidden',
             width: '100%', // Ocupar a tela toda na horizontal
         },
