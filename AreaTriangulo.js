@@ -28,7 +28,7 @@ export default function App() {
       
         <View style={styles.imageContainer}>
           <Image
-            source={{ uri: 'https://content.querobolsa.com.br/assets/25bb3ebc-af2a-496e-934e-dd4a7089d3d9' }}
+            source={{ uri: 'https://static.mundoeducacao.uol.com.br/mundoeducacao/2021/12/area-do-triangulo.jpg' }}
             style={[styles.image, styles.imageBorder]}
           />
         </View>
