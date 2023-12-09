@@ -1,0 +1,40 @@
+# React-Native
+Projetos para entregar ao Curso de react-native Senac - Instrutor Carlos Machado
+
+Escreva com suas palavras
+https://dontpad.com/react_native/exercicios
+Questão 1
+a) É uma biblioteca JavaScript FrontEnd usada para criar páginas e interfaces de forma dinâmica, fazendo o uso e reuso de componentes criados pelos usuários. Muito usado na criação de projetos em conceito SPA.
+b) React Native
+E um framework, baseado em JS e em conjunto com o ReactJS, usado para criar aplicativos móveis, que funciona em várias plataformas como IOS, Android
+Possui grande capacidade de compartilhamento do seu código com estas plataformas, o que facilita para os desenvolvedores. Nesse sentido, ele possibilita economia de tempo e recursos.
+**c)**JavaScript
+É uma linguagem de programação de alto nível e não tipada, usada para criar páginas dinâmicas e interativas. Seu surgimento revolucionou a maneira que se constrói sites para WEB. O JS também pode ser usado em vários conceitos, desde páginas e sites básicos, passando também por construção de aplicativos e jogos. JavaScript é o nome conhecido dessa linguagem, desde a época em que a Sun Microsystem era a empresa que o mantinha, porém o nome dessa linguagem hoje é o ECMAScript, muito pouco falado, mas esse é o fato.
+d) TypeScript
+É uma linguagem usada com o JavaScript, com sintaxe do JavaScript. Foi criada ajudar o código Java script a ter menos erros, e também facilitar a manutenção e escalabilidade do código.
+O TypeScript possui a capacidade, de se fazer verificações estáticas, isto é, antes da execução.
+e) IDE
+Software que oferece um ambiente completo para desenvolvedores escreverem, testarem e depurarem seus programas ou aplicativos.
+f) Container
+É como um pacote que pode conter um programa e tudo que ele precisa para rodar em qualquer lugar, sem causar conflitos com outros softwares. Isso favorece a portabilidade deste software, tornando tanto o desenvolvimento, quanto a sua distribuição mais fácil.
+g) Variável de Estado
+Variável que é usada para armazenar dados, que podem ser usados para controlar o comportamento ou a aparência de elementos na interface de usuário. Dentro de um contexto React, isso faz muito sentido, pois a cada alteração nesse comportamento, ou seja, nessa variável, o React renderiza novamente.
+
+h) HTML
+Linguagem de Marcação usada para estruturar e criar páginas WEB.
+i)CSS
+Linguagem usada para a estilização das páginas WEB, pois o HTML não é capaz de fazer isso.
+j) ScrollView
+Componente de desenvolvimento de aplicativos móveis usado para permitir a rolagem de conteúdo que não cabe inteiramente na tela. Ele cria uma área de rolagem, onde se pode colocar outros elementos.
+k) View
+É um bloco de construção para criar a aparência e o layout da tela de interfaces para um aplicativo móvel, permitindo que você agrupe e posicione outros elementos dentro dele. Semelhante as Divs em HTML.
+l) Text
+Também um componente React Native, só que é usado para renderizar conteúdo de textos na tela.
+m) TextInput
+Componente React Native, usado para criar caixas de entrada de texto onde os usuários podem inserir informações
+n) StyleSheet
+É usado para definir e organizar estilos de formatação, usando uma escrita, quase idêntica ao CSS. Uma particularidade, é que o Style Sheet é atribuído para uma constante e pode receber os estilos “com sintaxe parecida com CSS” como objetos, sendo passados por parâmetros.
+o) Image
+É um componente React Native, usado no desenvolvimento para exibir e manipular imagens dinâmicas e/ou estáticas na tela.
+p) TouchableHighlight
+Componente React Native, usado para criar áreas clicáveis ou sensíveis ao toque em um aplicativo móvel. Muito utilizado para tornar botões, imagens, ou quaisquer outros trechos do código, como elementos clicáveis.
