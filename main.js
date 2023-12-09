@@ -1,3 +1,6 @@
+//Projeto porta logica
+
+
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Picker } from "@react-native-picker/picker";
