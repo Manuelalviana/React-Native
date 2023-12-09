@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Área de Formas Geométricas</title>
+</head>
+<body>
+  <center>
+    <h1>Calculadora de Área de Formas Geométricas</h1>
+
+    <label for="formas">Escolha uma forma geométrica:</label>
+    <select id="formas">
+        <option value="nenhum" selected>Nenhum</option>
+        <option value="quadrado">Quadrado</option>
+        <option value="retangulo">Retângulo</option>
+        <option value="triangulo">Triângulo</option>
+        <option value="circulo">Círculo</option>
+        <option value="trapezio">Trapézio</option>
+        <option value="losango">Losango</option>
+    </select>
+
+    <!-- Adicionando os inputs -->
+    <div id="inputs"></div>
+
+    <button id="calcular">Calcular Área</button>
+
+    <p> Resposta: <span></span></p>
+
+    <script>
+        // Função Caixa de texto
+        function mostrarCamposEntrada() {
+            const formaSelecionada = document.getElementById("formas").value;
+            const inputsDiv = document.getElementById("inputs");
+
+            switch (formaSelecionada) {
+                case "quadrado":
+                    inputsDiv.innerHTML = `
+                        <label for="input1">Digite o lado:</label>
+                        <input type="number" id="input1">
+                    `;
+                    break;
+                case "retangulo":
+                    inputsDiv.innerHTML = `
+                        <label for="input1">Digite a base:</label>
+                        <input type="number" id="input1">
+                        <label for="input2">Digite a altura:</label>
+                        <input type="number" id="input2">
+                    `;
+                    break;
+                case "triangulo":
+                    inputsDiv.innerHTML = `
+                        <label for="input1">Digite a base:</label>
+                        <input type="number" id="input1">
+                        <label for="input2">Digite a altura:</label>
+                        <input type="number" id="input2">
+                    `;
+                    break;
+                case "circulo":
+                    inputsDiv.innerHTML = `
+                        <label for="input1">Digite o raio:</label>
+                        <input type="number" id="input1">
+                    `;
+                    break;
+                case "trapezio":
+                    inputsDiv.innerHTML = `
+                        <label for="input1">Digite a base maior:</label>
+                        <input type="number" id="input1">
+                        <label for="input2">Digite a base menor:</label>
+                        <input type="number" id="input2">
+                        <label for="input3">Digite a altura:</label>
+                        <input type="number" id="input3">
+                    `;
+                    break;
+                case "losango":
+                    inputsDiv.innerHTML = `
+                        <label for="input1">Digite a diagonal maior:</label>
+                        <input type="number" id="input1">
+                        <label for="input2">Digite a diagonal menor:</label>
+                        <input type="number" id="input2">
+                    `;
+                    break;
+                case "paralelogramo":
+                    inputsDiv.innerHTML = `
+                        <label for="input1">Digite a base:</label>
+                        <input type="number" id="input1">
+                        <label for="input2">Digite a altura:</label>
+                        <input type="number" id="input2">
+                    `;
+                    break;
+                case "pentagono regular":
+                case "hexagono regular":
+                case "heptagono regular":
+                case "octogono regular":
+                    inputsDiv.innerHTML = `
+                        <label for="input1">Digite o lado:</label>
+                        <input type="number" id="input1">
+                        <label for="input2">Digite o apótema:</label>
+                        <input type="number" id="input2">
+                    `;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+        // Limpar os Inputs
+        function limpaInput(formaSelecionada) {
+            if(formaSelecionada == "trapezio") {
+                document.getElementById("input1").value = "";
+                document.getElementById("input2").value = "";
+                document.getElementById("input3").value = "";
+            } else {
+                document.getElementById("input1").value = "";
+                document.getElementById("input2").value = "";
+            }
+        }
+
+        // Função para calcular a área da forma selecionada
+        function calcularArea() {
+            const formaSelecionada = document.getElementById("formas").value;
+            let area = 0;
+
+            switch (formaSelecionada) { 
+                case "quadrado":
+                    const ladoQuadrado = parseFloat(document.getElementById("input1").value);
+                    if (!isNaN(ladoQuadrado)) {
+                        area = ladoQuadrado * ladoQuadrado;
+                    } else {
+                        document.querySelector("span").textContent = "Digite um valor válido para os Lados do Quadrado.";
+                        limpaInput(formaSelecionada);
+                        return;
+                    }
+                    break;
+                case "retangulo":
+                    const baseRetangulo = parseFloat(document.getElementById("input1").value);
+                    const alturaRetangulo = parseFloat(document.getElementById("input2").value);
+                    if (!isNaN(baseRetangulo) && !isNaN(alturaRetangulo)) {
+                        area = baseRetangulo * alturaRetangulo;
+                    } else {
+                        document.querySelector("span").textContent = "Digite um valor válido para Base e Altura do Retângulo";
+                        limpaInput(formaSelecionada);
+                        return;
+                    }
+                    break;
+                case "triangulo":
+                    const baseTriangulo = parseFloat(document.getElementById("input1").value);
+                    const alturaTriangulo = parseFloat(document.getElementById("input2").value);
+                    if (!isNaN(baseTriangulo) && !isNaN(alturaTriangulo)) {
+                        area = (baseTriangulo * alturaTriangulo) / 2;
+                    } else {
+                        document.querySelector("span").textContent = "Digite valores válidos para a Base e a Altura do Triângulo.";
+                        limpaInput(formaSelecionada);
+                        return;
+                    }
+                    break;
+                case "circulo":
+                    const raioCirculo = parseFloat(document.getElementById("input1").value);
+                    if (!isNaN(raioCirculo)) {
+                        area = Math.PI * Math.pow(raioCirculo, 2);
+                    } else {
+                        document.querySelector("span").textContent = "Digite um valor válido para o Raio do Círculo.";
+                        limpaInput(formaSelecionada);
+                        return;
+                    }
+                    break;
+                case "trapezio":
+                    const baseMaiorTrapezio = parseFloat(document.getElementById("input1").value);
+                    const baseMenorTrapezio = parseFloat(document.getElementById("input2").value);
+                    const alturaTrapezio = parseFloat(document.getElementById("input3").value);
+                    if (!isNaN(baseMaiorTrapezio) && !isNaN(baseMenorTrapezio) && !isNaN(alturaTrapezio) && baseMaiorTrapezio > baseMenorTrapezio) {
+                        area = ((baseMaiorTrapezio + baseMenorTrapezio) * alturaTrapezio) / 2;
+                    } else {
+                        document.querySelector("span").textContent = "Digite valores válidos para as Bases e a Altura do Trapézio (a Base maior deve ser Maior que a Base Menor).";
+                        limpaInput(formaSelecionada);
+                        return;
+                    }
+                    break;
+                case "losango":
+                    const diagonalMaiorLosango = parseFloat(document.getElementById("input1").value);
+                    const diagonalMenorLosango = parseFloat(document.getElementById("input2").value);
+                    if (!isNaN(diagonalMaiorLosango) && !isNaN(diagonalMenorLosango)) {
+                        area = (diagonalMaiorLosango * diagonalMenorLosango) / 2;
+                    } else {
+                        document.querySelector("span").textContent = "Digite valores válidos para as Diagonais do Losango.";
+                        limpaInput(formaSelecionada);
+                        return;
+                    }
+                   
+                    break;
+                default: 
+                    document.querySelector("span").textContent = "Forma Geométrica Inválida.";
+                    break;
+            }
+
+            document.querySelector("span").textContent = `A área da forma geométrica ${formaSelecionada} selecionada é: ${area.toFixed(2)}`;
+        }
+
+        // Evento de mudança da combobox para mostrar os campos de entrada adequados
+        document.getElementById("formas").addEventListener("change", mostrarCamposEntrada);
+
+        // Evento de clique do botão "Calcular Área"
+        document.getElementById("calcular").addEventListener("click", calcularArea);
+
+        // Mostrar os campos 
+        mostrarCamposEntrada();
+    </script>
+</body>
+</html>
