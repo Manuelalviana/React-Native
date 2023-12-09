@@ -16,7 +16,7 @@ const Calculator = () => {
     const validNumber = (text) => {
       return /^(\d{1,3}(\.\d{3})*(,\d+)?|\d+(,\d+)?)$/.test(text);
     }
-      // Evoca a validação. Encerra ou continua a execução
+      // Encerra ou continua a execução
       if (!validNumber(number1) || !validNumber(number2)) {
         response = "Informe apenas números. Use (.) como separador de milhar e (,) para decimais"
         setResult(response);
